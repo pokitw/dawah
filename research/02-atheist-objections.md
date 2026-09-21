@@ -218,7 +218,7 @@ Rule: state the objection in its STRONGEST fair form first (steelman). Then answ
 **Steelman:** Even if a god exists, why YOUR religion? You believe Islam mostly because you were born in a Muslim family (religious diversity / geography objection).
 
 **Islamic response:**
-- Move from "a God exists" to "which message is true" using evidence: the Quran (its preservation, challenge, and content), the truthfulness and life of Prophet Muhammad ﷺ, and pure monotderm (tawhid) that fits the fitrah.
+- Move from "a God exists" to "which message is true" using evidence: the Quran (its preservation, challenge, and content), the truthfulness and life of Prophet Muhammad ﷺ, and pure monotheism (tawhid) that fits the fitrah.
 - The "born into it" point cuts both ways: an atheist born in a secular society could be an atheist by environment too. Origin of a belief doesn't decide its truth (genetic fallacy).
 
 **Notes:** This needs its own evidence (Quran + prophethood). Be ready to shift the topic here honestly.
