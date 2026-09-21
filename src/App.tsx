@@ -5,6 +5,8 @@ import Learn from './pages/Learn'
 import Debate from './pages/Debate'
 import Ask from './pages/Ask'
 import Profile from './pages/Profile'
+import Library from './pages/Library'
+import LibraryItem from './pages/LibraryItem'
 import NotFound from './pages/NotFound'
 
 export default function App() {
@@ -23,6 +25,8 @@ export default function App() {
           <Route path="/debate" element={<Debate />} />
           <Route path="/ask" element={<Ask />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/library" element={<Library />} />
+          <Route path="/library/:slug" element={<LibraryItem />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
