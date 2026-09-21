@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+/* Dark mode is controlled by a `dark` class on <html>, not only by the OS. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-ink-50: #f6f7f6;
+  --color-ink-100: #e9ebe9;
+  --color-ink-200: #d3d8d4;
+  --color-ink-300: #adb6af;
+  --color-ink-400: #7f8c83;
+  --color-ink-500: #5f6d64;
+  --color-ink-600: #4a564f;
+  --color-ink-700: #3d4741;
+  --color-ink-800: #333b36;
+  --color-ink-900: #1c211e;
+  --color-ink-950: #10130f;
+
+  --color-brand-50: #eefbf5;
+  --color-brand-100: #d5f5e5;
+  --color-brand-200: #aeeacf;
+  --color-brand-300: #78d7b3;
+  --color-brand-400: #41bd93;
+  --color-brand-500: #1da178;
+  --color-brand-600: #108161;
+  --color-brand-700: #0d6750;
+  --color-brand-800: #0e5241;
+  --color-brand-900: #0d4437;
+  --color-brand-950: #04261f;
+
+  --color-sand-50: #fbf8f1;
+  --color-sand-100: #f4ecdb;
+  --color-sand-200: #e8d8b6;
+  --color-sand-300: #d9bd88;
+  --color-sand-400: #cb9f5c;
+  --color-sand-500: #c2873f;
+  --color-sand-600: #ab6c34;
+  --color-sand-700: #8e522d;
+  --color-sand-800: #74432b;
+  --color-sand-900: #603826;
+}
+
+:root {
+  color-scheme: light;
+  --page: var(--color-sand-50);
+  --card: #ffffff;
+  --line: var(--color-ink-200);
+  --text: var(--color-ink-900);
+  --muted: var(--color-ink-500);
+}
+
+.dark {
+  color-scheme: dark;
+  --page: var(--color-ink-950);
+  --card: var(--color-ink-900);
+  --line: var(--color-ink-700);
+  --text: var(--color-ink-50);
+  --muted: var(--color-ink-300);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background-color: var(--page);
+    color: var(--text);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
+    /* Leave room for the fixed bottom bar on phones. */
+    padding-bottom: calc(4.75rem + env(safe-area-inset-bottom));
+    overscroll-behavior-y: none;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-brand-500);
+    outline-offset: 2px;
+    border-radius: 0.375rem;
+  }
+}
+
+@layer components {
+  .card {
+    background-color: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 1rem;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.75rem;
+    padding: 0.625rem 1rem;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    min-height: 2.75rem;
+    transition: background-color 120ms ease, opacity 120ms ease;
+  }
+  .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .btn-primary {
+    background-color: var(--color-brand-600);
+    color: #fff;
+  }
+  .btn-primary:hover:not(:disabled) {
+    background-color: var(--color-brand-700);
+  }
+  .btn-ghost {
+    border: 1px solid var(--line);
+    color: var(--text);
+  }
+  .btn-ghost:hover:not(:disabled) {
+    background-color: color-mix(in srgb, var(--text) 6%, transparent);
+  }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    padding: 0.125rem 0.625rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .field {
+    width: 100%;
+    border-radius: 0.75rem;
+    border: 1px solid var(--line);
+    background-color: var(--card);
+    color: var(--text);
+    padding: 0.75rem;
+    font-size: 1rem; /* 16px stops iOS zooming in on focus */
+  }
+  .muted {
+    color: var(--muted);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
