@@ -1,1 +1,1 @@
-{"root":["./vite.config.ts","./vitest.config.ts","./scripts/build-content.ts","./scripts/seed.ts","./scripts/lib/load-files.ts","./scripts/lib/md.ts","./scripts/lib/parse-research.ts","./scripts/lib/quiz-bank.ts","./scripts/lib/types.ts"],"version":"5.9.3"}
+{"root":["./vite.config.ts","./vitest.config.ts","./scripts/build-content.ts","./scripts/seed.ts","./scripts/lib/load-files.ts","./scripts/lib/md.ts","./scripts/lib/parse-research.ts","./scripts/lib/quiz-bank.ts","./scripts/lib/types.ts","./tests/scoring.test.ts"],"version":"5.9.3"}

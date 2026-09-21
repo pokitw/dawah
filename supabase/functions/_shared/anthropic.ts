@@ -4,7 +4,7 @@
  * This file runs on Supabase's servers, never in the browser. The key comes
  * from a secret set with:  supabase secrets set ANTHROPIC_API_KEY=sk-ant-...
  */
-import Anthropic from 'npm:@anthropic-ai/sdk@^0.70.0'
+import Anthropic from 'npm:@anthropic-ai/sdk@^0.127.0'
 import { MODEL } from './config.ts'
 
 let client: Anthropic | null = null
