@@ -124,6 +124,22 @@
     font-size: 0.75rem;
     font-weight: 600;
   }
+  /* A chip you can press is a tap target, so give it room for a finger.
+     A plain badge stays small, because nobody taps it. */
+  button.chip,
+  a.chip,
+  .chip:is(button, a) {
+    min-height: 2.5rem;
+    padding: 0.5rem 0.875rem;
+  }
+  /* A text link on its own line also needs a tap area on a phone. */
+  .link-row {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
   .field {
     width: 100%;
     border-radius: 0.75rem;

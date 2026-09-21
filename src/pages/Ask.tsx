@@ -175,11 +175,9 @@ export default function Ask() {
               </li>
             ))}
           </ul>
-          <p className="muted mt-2 text-sm">
-            <Link to="/library?kind=qa" className="underline">
-              See all {qaBank.length} ready answers →
-            </Link>
-          </p>
+          <Link to="/library?kind=qa" className="link-row muted mt-1 text-sm">
+            See all {qaBank.length} ready answers →
+          </Link>
         </>
       )}
 

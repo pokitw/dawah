@@ -12,27 +12,31 @@
  */
 
 export const CRISIS_PATTERNS: RegExp[] = [
-  /\bi (?:am|'m|m) (?:really )?(?:losing|loosing) (?:my )?(?:faith|iman|belief)/i,
-  /\bi (?:don'?t|do not|can'?t) believe (?:in )?(?:allah|god|islam)? ?(?:any ?more|anymore)\b/i,
-  /\bi (?:think|feel)? ?i(?:'m| am) (?:becoming|turning into) (?:an )?(?:atheist|ex-?muslim)/i,
-  /\bi (?:want to|wanna|might) leave islam\b/i,
-  /\bi(?:'m| am) (?:scared|terrified|afraid) (?:of|about|that) (?:losing|my) ?(?:my )?(?:faith|iman|belief)/i,
-  /\bi feel (?:so )?(?:empty|hopeless|alone|lost) (?:about|with|in) (?:my )?(?:faith|deen|religion)/i,
-  /\bmy (?:faith|iman) is (?:gone|dying|breaking|slipping)/i,
-  /\bi hate (?:allah|god)\b/i,
-  /\bwhat(?:'s| is) the point of (?:living|life)\b/i,
-  /\bi (?:want|wanna) to (?:die|end it|kill myself)\b/i,
-  /\bi(?:'m| am) (?:having|getting) a (?:faith|religious) crisis\b/i,
-  /\bi can'?t (?:pray|make dua) any ?more\b/i,
-  /\bthese doubts (?:are )?(?:killing|destroying|eating) me\b/i,
+  // `I'm` is far more common than `I am`, and the apostrophe may be straight
+  // or curly, so every first-person pattern below accepts all three forms.
+  /\bi(?:'m|’m| am|m)\s+(?:really\s+)?(?:losing|loosing)\s+(?:my\s+)?(?:faith|iman|belief|religion)/i,
+  /\bi\s+(?:don'?t|do not|can'?t|cannot)\s+believe\s+(?:in\s+)?(?:allah|god|islam|any\s+of\s+it)?\s*(?:any\s?more|anymore)\b/i,
+  /\bi(?:'m|’m| am)?\s*(?:think|feel)?\s*i?(?:'m|’m| am)?\s*(?:becoming|turning into)\s+(?:an?\s+)?(?:atheist|ex-?muslim|non-?believer)/i,
+  /\bi\s+(?:want to|wanna|might|am going to)\s+leave\s+(?:islam|the\s+deen|my\s+religion)\b/i,
+  /\bi(?:'m|’m| am)\s+(?:scared|terrified|afraid)\s+(?:of|about|that)\s+(?:i(?:'m|’m| am)\s+)?(?:losing|loosing)?\s*(?:my\s+)?(?:faith|iman|belief)/i,
+  /\bi\s+feel\s+(?:so\s+)?(?:empty|hopeless|alone|lost)\s+(?:about|with|in)\s+(?:my\s+)?(?:faith|deen|religion)/i,
+  /\bmy\s+(?:faith|iman)\s+is\s+(?:gone|dying|breaking|slipping|disappearing)/i,
+  /\bi\s+hate\s+(?:allah|god)\b/i,
+  /\bwhat(?:'s|’s| is)\s+the\s+point\s+of\s+(?:living|life|anything)\b/i,
+  /\bi\s+(?:want|wanna)\s+to\s+(?:die|end it|kill myself)\b/i,
+  /\bi(?:'m|’m| am)\s+(?:having|getting|in)\s+a\s+(?:faith|religious)\s+crisis\b/i,
+  /\bi\s+can'?t\s+(?:pray|make dua)\s+any\s?more\b/i,
+  /\bthese\s+doubts\s+(?:are\s+)?(?:killing|destroying|eating)\s+me\b/i,
+  /\bi(?:'m|’m| am)\s+(?:losing|loosing)\s+my\s+(?:religion|deen)\b/i,
 ]
 
 export const PRACTICE_MARKERS: RegExp[] = [
   /\b(?:for )?(?:practice|practise|practicing|practising|roleplay|role-play)\b/i,
   /\bpretend(?:ing)?\b/i,
-  /\bhow (?:do|should|would) i (?:answer|reply|respond)\b/i,
-  /\bmy friend (?:says|asked|thinks)\b/i,
-  /\bsomeone (?:told|asked) me\b/i,
+  /\bhow (?:do|should|would|can) i (?:answer|reply|respond|deal with)\b/i,
+  /\bmy friend (?:says|asked|thinks|told)\b/i,
+  /\bsomeone (?:told|asked|says to) me\b/i,
+  /\bwhat (?:do|should) i say (?:to|when|if)\b/i,
 ]
 
 export const CRISIS_REPLY = `Let's pause the practice for a moment. 🤍

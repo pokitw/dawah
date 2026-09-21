@@ -12,5 +12,11 @@
     "verbatimModuleSyntax": true,
     "types": ["node"]
   },
-  "include": ["vite.config.ts", "vitest.config.ts", "scripts/**/*.ts", "tests/**/*.ts"]
+  "include": [
+    "vite.config.ts",
+    "vitest.config.ts",
+    "scripts/**/*.ts",
+    "tests/**/*.ts",
+    "supabase/functions/**/*.ts"
+  ]
 }

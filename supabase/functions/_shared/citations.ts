@@ -62,10 +62,13 @@ export function verifyCitations(
       dropped.push(id)
       continue
     }
-    if (seen.has(key)) continue
-    seen.add(key)
 
     const row = byKey.get(key)
+    // De-duplicate by the ROW, not by the text. "ARG-2" and "arg-kalam" are
+    // two names for one source and must not be listed twice.
+    const identity = row ? row.slug.toLowerCase() : key
+    if (seen.has(identity)) continue
+    seen.add(identity)
     const urls = (row?.meta as { urls?: string[] } | null)?.urls ?? []
     const claimed = String((item as { url?: unknown })?.url ?? '')
     // Only allow a URL the database actually holds for this row.
