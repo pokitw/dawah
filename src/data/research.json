@@ -5102,7 +5102,7 @@
     {
       "level": 1,
       "name": "Foundations (Beginner)",
-      "goals": "Understand the basic words; give one clear argument; know the adab.\n- Module 1.1: Glossary + valid vs sound (file 00, 04).\n- Module 1.2: ARG-1 (Quran 52:35) and OBJ-6 (who created God).\n- Module 1.3: Dawah adab (file 05) + finding the root of doubt.",
+      "goals": "Understand the basic words; give one clear argument; know the adab.",
       "modules": [
         {
           "id": "1.1",
@@ -5137,7 +5137,7 @@
         {
           "id": "1.3",
           "level": 1,
-          "title": "Dawah adab+ finding the root of doubt.",
+          "title": "Dawah adab + finding the root of doubt.",
           "slugs": [
             "guide-the-golden-verses",
             "guide-first-find-the-root-of-their-doubt",
@@ -5150,7 +5150,7 @@
     {
       "level": 2,
       "name": "Core Arguments (Intermediate)",
-      "goals": "Use kalam, morality, fitrah; steelman.\n- Module 2.1: ARG-2 (kalam) + OBJ-11 (objections).\n- Module 2.2: ARG-5 (morality) + OBJ-4 (Euthyphro) + OBJ-7.\n- Module 2.3: ARG-4 (fitrah) + steelmanning practice (file 04).",
+      "goals": "Use kalam, morality, fitrah; steelman.",
       "modules": [
         {
           "id": "2.1",
@@ -5186,7 +5186,7 @@
     {
       "level": 3,
       "name": "Hard Questions (Advanced)",
-      "goals": "Handle evil, hiddenness, qadr, hell with care.\n- Module 3.1: OBJ-1, OBJ-2, OBJ-3 (problem of evil, all forms).\n- Module 3.2: OBJ-5 (hiddenness), OBJ-12 (qadr), OBJ-13 (hell).\n- Module 3.3: Emotional dawah — P5, P7 (listen first).",
+      "goals": "Handle evil, hiddenness, qadr, hell with care.",
       "modules": [
         {
           "id": "3.1",
@@ -5225,7 +5225,7 @@
     {
       "level": 4,
       "name": "Expert / Science & Meaning",
-      "goals": "Consciousness, fine-tuning, miracles, why-Islam, nihilism.\n- Module 4.1: ARG-6, ARG-7, OBJ-8, OBJ-9, OBJ-10.\n- Module 4.2: OBJ-14 (why Islam), OBJ-15 (miracles), OBJ-16 (meaning).\n- Module 4.3: ARG-3 (contingency, deep).",
+      "goals": "Consciousness, fine-tuning, miracles, why-Islam, nihilism.",
       "modules": [
         {
           "id": "4.1",

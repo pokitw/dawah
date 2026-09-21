@@ -7,6 +7,9 @@ import Ask from './pages/Ask'
 import Profile from './pages/Profile'
 import DebateRoom from './pages/DebateRoom'
 import Scorecard from './pages/Scorecard'
+import Module from './pages/Module'
+import Quiz from './pages/Quiz'
+import Flashcards from './pages/Flashcards'
 import Library from './pages/Library'
 import LibraryItem from './pages/LibraryItem'
 import NotFound from './pages/NotFound'
@@ -24,6 +27,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/learn" element={<Learn />} />
+          <Route path="/learn/module/:id" element={<Module />} />
+          <Route path="/learn/quiz/:id" element={<Quiz />} />
+          <Route path="/learn/flashcards" element={<Flashcards />} />
           <Route path="/debate" element={<Debate />} />
           <Route path="/debate/:id" element={<DebateRoom />} />
           <Route path="/debate/:id/scorecard" element={<Scorecard />} />

@@ -532,7 +532,9 @@ function parseLearningPath(md: string): LevelDef[] {
     const level = Number(head[1])
     const name = head[2].trim()
     const f = readFields(body)
-    const goals = f.get('goals') ?? ''
+    // "Goals:" runs until the module bullets, which carry no bold label of
+    // their own, so cut it at the first "- Module" line.
+    const goals = (f.get('goals') ?? '').split(/\n\s*-\s*Module\b/)[0].trim()
     const checkpoint = f.get('checkpoint') ?? ''
 
     const modules: ModuleDef[] = []
@@ -540,7 +542,14 @@ function parseLearningPath(md: string): LevelDef[] {
       const m = /^\s*-\s*Module\s+([\d.]+):\s*(.*)$/.exec(line)
       if (!m) continue
       const id = m[1]
-      const title = stripInlineLinks(m[2].replace(/\s*\(file[^)]*\)\s*/gi, '').trim())
+      // Drop "(file 00, 04)" pointers, leaving one space behind so
+      // "Dawah adab (file 05) + finding..." does not become "adab+ finding".
+      const title = stripInlineLinks(
+        m[2]
+          .replace(/\s*\(file[^)]*\)\s*/gi, ' ')
+          .replace(/\s{2,}/g, ' ')
+          .trim(),
+      )
       modules.push({ id, level, title, slugs: [] })
     }
 
