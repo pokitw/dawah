@@ -46,6 +46,12 @@ export default function LibraryItem() {
         )
       : []
 
+  // A persona's tags already list its favourite objections, so the two lists
+  // overlap. De-duplicate before rendering.
+  const connected = [...linked, ...favourites].filter(
+    (r, i, list) => list.findIndex((x) => x.slug === r.slug) === i,
+  )
+
   return (
     <Page>
       <PageHeader title={code} subtitle={row.kind} back="/library" />
@@ -82,11 +88,11 @@ export default function LibraryItem() {
         </Card>
       )}
 
-      {(linked.length > 0 || favourites.length > 0 || relatedPersonas.length > 0) && (
+      {(connected.length > 0 || relatedPersonas.length > 0) && (
         <Card className="mt-3">
           <h2 className="text-sm font-bold">Connected pages</h2>
           <ul className="mt-2 grid gap-1 text-sm">
-            {[...linked, ...favourites].map((r) => (
+            {connected.map((r) => (
               <li key={r.slug}>
                 <Link to={`/library/${r.slug}`} className="underline">
                   {codeOf(r)} — {r.title.replace(/^(ARG|OBJ|P)-?\d+[:—-]\s*/, '')}

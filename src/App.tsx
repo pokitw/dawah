@@ -10,6 +10,17 @@ import Scorecard from './pages/Scorecard'
 import Module from './pages/Module'
 import Quiz from './pages/Quiz'
 import Flashcards from './pages/Flashcards'
+import Trainers from './pages/Trainers'
+import FallacyTrainer from './pages/FallacyTrainer'
+import WeakAnswerTrainer from './pages/WeakAnswerTrainer'
+import SteelmanTrainer from './pages/SteelmanTrainer'
+import RapidFire from './pages/RapidFire'
+import Daily from './pages/Daily'
+import Glossary from './pages/Glossary'
+import Sources from './pages/Sources'
+import Notes from './pages/Notes'
+import History from './pages/History'
+import Weakness from './pages/Weakness'
 import Library from './pages/Library'
 import LibraryItem from './pages/LibraryItem'
 import NotFound from './pages/NotFound'
@@ -37,6 +48,17 @@ export default function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/library" element={<Library />} />
           <Route path="/library/:slug" element={<LibraryItem />} />
+          <Route path="/glossary" element={<Glossary />} />
+          <Route path="/sources" element={<Sources />} />
+          <Route path="/notes" element={<Notes />} />
+          <Route path="/history" element={<History />} />
+          <Route path="/weakness" element={<Weakness />} />
+          <Route path="/daily" element={<Daily />} />
+          <Route path="/train" element={<Trainers />} />
+          <Route path="/train/fallacy" element={<FallacyTrainer />} />
+          <Route path="/train/weak-answer" element={<WeakAnswerTrainer />} />
+          <Route path="/train/steelman" element={<SteelmanTrainer />} />
+          <Route path="/train/rapid" element={<RapidFire />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
